@@ -1,0 +1,14 @@
+/*
+var pathsData = "data/paths.php", parksData = "data/parks.php", staffData = "data/staff.php",
+	pitchdata = "data/pitch.php", wifiData = "data/wifi.php", hostelsData = "data/hostels.php",
+	boundaryData = "data/kimathi_boundary.php", roadsData = "data/roads.php", labsData = "data/labs.php",
+	messData = "data/Mess.php", lecData = "data/Lec.php";
+
+	map.on('dblclick',function(event){
+	console.log({
+			"lat":event.latlng.lat,
+			"lng":event.latlng.lng,
+			"name": ""
+		});
+	});
+*/

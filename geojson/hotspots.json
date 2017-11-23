@@ -1,0 +1,10 @@
+[
+    {"lat": -0.3975699230110457, "lng": 36.96115672588349, "name": "library", "location":"Library" ,"area":"Library" ,"morning": -59.75,"noon":-59.25 ,"evening":-57.5},
+    {"lat": -0.3975538301443708, "lng": 36.96100115776063, "name": "Auditorium", "location":"Auditorium", "area":"Auditorium,RC6 & RC7" ,"morning":-50.25 ,"noon":-47.5 ,"evening":-46},
+    {"lat": -0.39754846585547493, "lng": 36.96088314056397, "name": "Eng Lab", "location":"Gis Lab","area":"Engineering Lab & GIS Lab" ,"morning": -60,"noon": -58.75,"evening":-64},
+    {"lat": -0.3977201230984891, "lng": 36.96070611476899, "name": "Computer Lab 1", "location":"Computer Lab 1","area": "Computer lab 1","morning":-70.25 ,"noon": -44.75,"evening":-65},
+    {"lat": -0.39780595171866034, "lng": 36.96070075035096, "name": "Computer Lab 2", "location":"Computer Lab 2","area": "Computer Lab 2","morning":-62.25,"noon": -61.25,"evening":-53},
+    {"lat": -0.392473847003221, "lng": 36.95819020271302, "name": "KSC", "location":"School of Bs","area":"New Catering Block,Sch of Bs block","morning":-90 ,"noon":-88.75 ,"evening":-85},
+    {"lat": -0.3922109966824812, "lng": 36.9601321220398, "name": "Old Admin", "location":"Student Center","area":"Student Center, Male Hostels" ,"morning": -57.25,"noon":-55.5 ,"evening":-59},
+    {"lat": -0.39785423031712025, "lng": 36.95999264717103, "name": "DeKUT Munyeni", "location":"Munyeni House","area":"Munyeni, Cafeteria","morning":-87 ,"noon":-82 ,"evening":-75.75}
+]
