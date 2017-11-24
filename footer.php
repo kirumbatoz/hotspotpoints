@@ -34,7 +34,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="copyright">
-						Copyright &copy; Nehemiah Hadji
+						Copyright &copy; <?php echo date("Y"); ?> Jason Muriki Kinyua
 					</div>
 				</div>
 			</div>	
