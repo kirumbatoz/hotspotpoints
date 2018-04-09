@@ -5,7 +5,8 @@ var landlink = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y
 var pathsData = "geojson/footpath.geojson", parksData = "geojson/parking.geojson", bushData = "geojson/bushes.geojson",
 	pitchData= "geojson/football.geojson", pondData = "geojson/ponds.geojson", buildingData = "geojson/buildings.geojson",
 	boundaryData = "geojson/boundary.geojson", roadsData = "geojson/roads.geojson", medData = "geojson/meds.geojson",
-	toiletData = "geojson/toilets.geojson", maizeData = "geojson/maize.geojson", hotspotData = "geojson/hotspots.json";
+	toiletData = "geojson/toilets.geojson", maizeData = "geojson/maize.geojson", hotspotData = "geojson/hotspots.json",
+	points="geojson/points.geojson",polygon="geojson/polygon.geojson",polyline="geojson/polyline.geojson";
 
 var map = L.map('map',{
 	layers: [OpenStreetMap],
@@ -90,6 +91,10 @@ var paths=L.geoJson(false, {
 	style:paths_st,
 });
 
+$.getJSON(points, function(data){
+L.geoJson(data,{}).addTo(map);
+});
+
 $.getJSON(pathsData, function (data) {
 	paths.addData(data).addTo(map);
 });
@@ -101,7 +106,7 @@ var parkings=L.geoJson(false, {
 	}
 });
 
-$.getJSON(parksData, function (data) {
+$.getJSON(polygon, function (data) {
 	parkings.addData(data).addTo(map);
 });
 var pitch=L.geoJson(false, {
@@ -179,7 +184,7 @@ Boundary.addData(data).addTo(map);
 var Roads=L.geoJson(false, {
 style:paths_style,
 });
-$.getJSON(roadsData, function (data) {
+$.getJSON(polyline, function (data) {
 Roads.addData(data).addTo(map);
 });
 var maize_plantations=L.geoJson(false, {
@@ -229,12 +234,12 @@ var overlays =  {
 "paths":paths
 };
 L.control.layers(baseLayers,overlays,{ collapsed: true }).addTo(map);
+var testPoints = [];
+map.on('click',function(event){
+testPoints.push([event.latlng.lng,event.latlng.lat]);
+	});
 map.on('dblclick',function(event){
-	console.log({
-			"lat":event.latlng.lat,
-			"lng":event.latlng.lng,
-			"name": ""
-		});
+	console.log({points:testPoints});
 	});
 $('#search-input #search-item').autocomplete({
 	lookup: lookup,
